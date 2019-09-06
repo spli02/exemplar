@@ -1,0 +1,43 @@
+@import "./color.scss";
+
+header {
+    nav {
+        position: relative;
+        display: flex;
+        padding: 1rem 3rem;
+        font-size: 14px;
+        ul{
+            display: flex;
+            list-style: none;
+            li {
+                text-align: center;
+                align-self: center;
+                select{
+                    background-color: $white1;
+                    border: none;
+                    font-size: 1rem;
+                    color: $blue2;
+                }
+                a {
+                    text-decoration: none;
+                    padding: 20px;
+                    color: $blue2;
+                }
+                button{
+                    padding: 1rem;
+                    border: none;
+                    background-color: $blue3;
+                    a{
+                        color: $white1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        ul:last-child{
+            position: absolute;
+            top: 0;
+            right: 3rem;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "./color.scss";
+
+.footer{
+    padding: 4rem;
+    background-color: $blue2;
+    color: $white1;
+    font-size: 14px;
+    img{
+        width: 1rem;
+        height: auto;
+        margin: 0 0.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: $white1;
+    }
+    &__section1{
+        display: flex;
+        &__item{
+            flex: 1 1 25%;
+            padding: 0 1rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+            text-align: left;
+            h4{
+                margin-top: 0;
+                font-weight: bolder;
+            }
+            p{
+                line-height: 1.5rem;
+            }
+            ul{
+                padding: 0;
+                list-style: none;
+                li{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    &__section2{
+        display: flex;
+        position: relative;
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        &__right{
+            position: absolute;
+            right: 0;
+        }
+    }
+    &__section3{
+        display: flex;
+        position: relative;
+        &__left{
+            text-align: left;
+        }
+        &__right{
+            position: absolute;
+            right: 0;
+        }
+    }
+}

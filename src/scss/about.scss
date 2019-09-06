@@ -1,0 +1,138 @@
+@import "./color.scss";
+
+@mixin titleSetting($font-size:55px,$color:$white2) {
+    font-family: "Libre Caslon Display", serif;
+    font-size: $font-size;
+    color: $color;
+}
+
+.about{
+    margin:0;
+    color: $blue1;
+    text-align: center;
+    &__index{
+        position: relative;
+        height: 400px;
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            margin:0;
+            padding:0;
+            @include titleSetting($font-size:70px); 
+        }
+        img{
+            width: 100%;
+            height: 400px;
+            background-color: $blue1;
+        }
+    }
+    &__explain{
+        padding: 7rem 12rem;
+        background-color: $blue1;
+        color: $white1;
+        h2{
+            @include titleSetting(); 
+            text-align: justify;
+            line-height: 110%;
+            margin-bottom: 7rem;
+        }
+        &__item{
+            display: flex;
+            text-align: left;
+            line-height: 150%;
+            p:nth-child(2){
+                margin-left: 5rem;
+            }
+        }
+    }
+    &__team,
+    &__partner{
+        padding : 4rem;
+        h2{
+            @include titleSetting($color: $blue1); 
+            margin-bottom: 5rem;
+        }
+        &__section{
+            display: flex;
+            justify-content: space-around;
+            &__item{
+                margin: .5rem;
+                img{
+                    width: 20vw;
+                    height: auto;
+                }
+                p{
+                    text-align: left;
+                    span{
+                        font-weight: bolder;
+                    }
+                }
+                &__box {
+                    &--box1{
+                        background-color: $boxcolor1;   
+                    }
+                    &--box2{
+                        background-color: $boxcolor2;   
+                    }
+                    &--box3{
+                        background-color: $boxcolor3;   
+                    }
+                    &--box4{
+                        background-color: $boxcolor4;   
+                    }
+                }
+            }
+        }
+    }
+    &__job{
+        display: flex;
+        height: 460px;
+        text-align: left;
+        background-color: $white2;
+        &__left{
+            padding: 4rem;
+            line-height: 150%;
+            h2{
+                @include titleSetting($font-size: 2rem, $color: $blue1); 
+            }
+            p{
+                margin: 3rem 0;
+            }
+            a{
+                padding: 1rem;
+                background-color: $blue1;
+                color: $white1;
+                text-decoration: none;
+            }
+        }
+        &__right{
+            img{
+                height: 460px;
+            }
+        }
+    }
+    &__invest{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        background-color: $blue1;
+        color: $white1;
+        &__inner{
+            h2{
+                @include titleSetting(); 
+                margin: 0 0 3rem 0;
+            }
+            a{
+                padding: 1rem 3rem;
+                background-color: $blue3;
+                color: $white1;
+                text-decoration: none;
+            }
+        }
+    }
+}
